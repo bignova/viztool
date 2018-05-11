@@ -1,0 +1,82 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "stocks",
+  "devices": [
+    {
+      "py/object": "device.Device",
+      "name": "scraper",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "stock_update",
+          "graphs": {},
+          "token": ""
+        }
+      ]
+    }
+  ],
+  "graphs": [
+    {
+      "py/object": "graph.Graph",
+      "dataArray" : [],
+      "name": "chart0",
+        "json_format": {
+        "bindto": "#chart0",
+        "data": {
+          "x": "time",
+          "xFormat": "%Y-%m-%d %H:%M:%S",
+          "columns": [
+              ["time"],
+              ["amd_price"],
+              ["snap_price"],
+              ["svxy_price"],
+              ["amd_volume"],
+              ["snap_volume"],
+              ["svxy_volume"]
+          ],
+          "axes": {
+            "amd_price": "y",
+            "snap_price": "y",
+            "svxy_price": "y",
+            "amd_volume": "y2",
+            "snap_volume": "y2",
+            "svxy_volume": "y2"
+          },
+          "type": "line",
+          "types": {
+            "amd_volume": "bar",
+            "snap_volume": "bar",
+            "svxy_volume": "bar"
+          }
+        },
+        "bar": {
+          "width": {
+            "max": 30
+          }
+        },
+        "axis": {
+          "x": {
+              "type": "timeseries",
+              "localtime": false,
+              "tick": {
+                  "format": "%Y-%m-%d %H:%M:%S"
+              }
+          },
+          "y2": {
+            "show": true
+          }
+        },
+        "legend": {
+          "show": "true"
+        }
+      },
+      "sources" : {
+        "scraper": {
+          "stock_update": [
+            "time", "amd_price", "snap_price", "svxy_price", "amd_volume", "snap_volume", "svxy_volume"
+          ]
+        }
+      }
+    }
+  ]
+}

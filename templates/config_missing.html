@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Viz Demo</title>
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <div id="error"></div>
+    <div id="serving"></div>
+    <script>
+       var errDiv = document.getElementById('error');
+       var servingDiv = document.getElementById('serving');
+       errDiv.innerHTML += 'Error: config file: ' + '{{ config }}' + ' does not exist\n';
+       servingDiv.innerHTML += 'Now serving: ' + '{{ servingConfigs }}';
+    </script>
+</body>

@@ -1,0 +1,43 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "gaslevel",
+  "devices": [
+    {
+      "py/object": "device.Device",
+      "name": "gaslevel1",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "gaslevel",
+          "graphs": {},
+          "token": ""
+        }
+      ]
+    }
+  ],
+  "graphs": [
+    {
+      "py/object": "graph.Graph",
+      "dataArray": [],
+      "name": "graph1",
+      "json_format": {
+        "bindto": "#graph1",
+        "data": {
+          "columns": [
+            [
+              "gas"
+            ]
+          ],
+          "type": "gauge"
+        }
+      },
+      "sources": {
+        "gaslevel1": {
+          "gaslevel": [
+            "gas"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+    "py/object": "config.Config",
+    "urlExtension": "K30",
+    "devices": [
+      {
+        "py/object": "device.Device",
+        "name": "K30_test",
+        "events": [
+          {
+            "py/object": "event.Event",
+            "name": "new_K30_test",
+            "graphs": {},
+            "token": ""
+          }
+        ]
+      }
+    ],
+    "graphs": [
+      {
+        "py/object": "graph.Graph",
+        "dataArray" : [],
+        "name": "chart0",
+          "json_format": {
+          "bindto": "#chart0",
+          "data": {
+            "x": "time",
+            "xFormat": "%Y-%m-%d %H:%M:%S",
+            "columns": [
+                ["time"],
+                ["CO2"],
+                ["raw"],
+                ["temp"]
+            ],
+            "axes": {
+              "CO2": "y",
+              "raw": "y",
+              "temp": "y2"
+            },
+            "type": "bar",
+            "types": {
+              "raw": "spline",
+              "CO2": "spline"
+            }
+          },
+          "bar": {
+            "width": {
+              "max": 30
+            }
+          },
+          "axis": {
+            "x": {
+                "type": "timeseries",
+                "localtime": false,
+                "tick": {
+                    "format": "%Y-%m-%d %H:%M:%S"
+                }
+            },
+            "y2": {
+              "show": true
+            }
+          },
+          "legend": {
+            "show": "true"
+          }
+        },
+        "sources" : {
+          "K30_test": {
+            "new_K30_test": [
+              "time", 
+              "CO2",
+              "raw",
+              "temp"
+            ]
+          }
+        }
+      }
+    ]
+  }
+  

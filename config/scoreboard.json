@@ -1,0 +1,113 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "scoreboard",
+  "devices": [
+    {
+      "py/object": "device.Device",
+      "name": "prog1",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "x_update",
+          "graphs": {},
+          "token": ""
+        },
+		{
+          "py/object": "event.Event",
+          "name": "y_update",
+          "graphs": {},
+          "token": ""
+        },
+		{
+          "py/object": "event.Event",
+          "name": "z_update",
+          "graphs": {},
+          "token": ""
+        }
+      ]
+    },
+    {
+      "py/object": "device.Device",
+      "name": "prog2",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "x_update",
+          "graphs": {},
+          "token": ""
+        },
+		{
+          "py/object": "event.Event",
+          "name": "y_update",
+          "graphs": {},
+          "token": ""
+        },
+		{
+          "py/object": "event.Event",
+          "name": "z_update",
+          "graphs": {},
+          "token": ""
+        }
+      ]
+    },
+	{
+      "py/object": "device.Device",
+      "name": "prog3",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "x_update",
+          "graphs": {},
+          "token": ""
+        },
+		{
+          "py/object": "event.Event",
+          "name": "y_update",
+          "graphs": {},
+          "token": ""
+        },
+		{
+          "py/object": "event.Event",
+          "name": "z_update",
+          "graphs": {},
+          "token": ""
+        }
+      ]
+    }
+  ],
+  "graphs": [
+    {
+      "py/object": "graph.Graph",
+      "dataArray" : [],
+      "name": "chart1",
+      "json_format": {
+      "bindto": "#chart1",
+      "data": {
+        "x": "Variable Name",
+        "columns": [
+            ["Variable Name", "x", "y", "z"],
+			["Current Value", "Last Update From"]
+        ],
+        "type": "table"
+      }
+    },
+    "sources" : {
+     "prog1": {
+        "x_update": ["row", "column", "value", "color"],
+		"y_update": ["row", "column", "value", "color"],
+		"z_update": ["row", "column", "value", "color"]
+        },
+	 "prog2": {
+        "x_update": ["row", "column", "value", "color"],
+		"y_update": ["row", "column", "value", "color"],
+		"z_update": ["row", "column", "value", "color"]
+        },
+	 "prog3": {
+        "x_update": ["row", "column", "value", "color"],
+		"y_update": ["row", "column", "value", "color"],
+		"z_update": ["row", "column", "value", "color"]
+        }
+      }
+    }
+  ]
+}

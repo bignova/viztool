@@ -1,0 +1,48 @@
+{
+    "py/object": "config.Config",
+    "urlExtension": "mapbox",
+    "devices": [
+      {
+        "py/object": "device.Device",
+        "name": "flight",
+        "events": [
+          {
+            "py/object": "event.Event",
+            "name": "new_spot",
+            "graphs": {},
+            "token": ""
+          }
+        ]
+      }
+    ],
+    "graphs": [
+      {
+        "py/object": "graph.Graph",
+        "dataArray" : [],
+        "name": "map0",
+          "json_format": {
+          "bindto": "#map0",
+          "data": {
+            "type": "map",
+            "mapstyle": {
+                "height": "700px"
+            },
+            "mapview": {
+                "lat": 38.987,
+                "lng": -76.942,
+                "zoom": 12
+            }
+          }
+        },
+        "sources" : {
+          "flight": {
+            "new_spot": [
+              "lat", 
+              "lng"
+            ]
+          }
+        }
+      }
+    ]
+  }
+  

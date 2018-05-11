@@ -1,0 +1,187 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "temperature_test",
+  "devices": [
+    {
+      "py/object": "device.Device",
+      "name": "thermostat1",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "new_temperature_therm1",
+          "graphs": {},
+          "token": ""
+        }
+      ]
+    },
+    {
+      "py/object": "device.Device",
+      "name": "thermostat2",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "new_temperature",
+          "graphs": {},
+          "token": "password"
+        }
+      ]
+    }
+  ],
+  "graphs": [
+    {
+      "py/object": "graph.Graph",
+      "dataArray": [],
+      "name": "chart0",
+      "json_format": {
+        "bindto": "#chart0",
+        "data": {
+          "x": "time",
+          "columns": [
+            ["time"],
+            ["temperature1"],
+            ["temperature2"],
+            ["temperature3"],
+            ["temperature4"]
+          ],
+          "type": "bar",
+          "types": {
+            "temperature1": "spline",
+            "temperature2": "spline"
+          },
+          "groups": [
+            ["temperature3", "temperature4"]
+          ]
+        },
+        "bar": {
+          "width": {
+            "max": 30
+          }
+        },
+        "legend": {
+          "show": "true"
+        }
+      },
+      "sources": {
+        "thermostat2": {
+          "new_temperature": [
+            "temperature1",
+            "temperature2",
+            "temperature3",
+            "temperature4",
+            "time"
+          ]
+        }
+      }
+    },
+    {
+      "py/object": "graph.Graph",
+      "name": "chart1",
+      "dataArray": [],
+      "json_format": {
+        "bindto": "#chart1",
+        "data": {
+          "x": "time",
+          "columns": [
+            ["temperature1"],
+            ["time"]
+          ]
+        },
+        "axis": {
+          "y": {
+            "label": {
+              "text": "Y Label",
+              "position": "outer-middle"
+            }
+          }
+        }
+      },
+      "sources": {
+        "thermostat2": {
+          "new_temperature": [
+            "temperature1",
+            "time"
+          ]
+        }
+      }
+    },
+    {
+      "py/object": "graph.Graph",
+      "dataArray": [],
+      "name": "chart2",
+      "json_format": {
+        "bindto": "#chart2",
+        "data": {
+          "x": "time",
+          "columns": [
+            ["time"],
+            ["temperature1"],
+            ["temperature2"],
+            ["temperature3"],
+            ["temperature4"]
+          ],
+          "type": "bar",
+          "types": {
+            "temperature1": "spline",
+            "temperature2": "spline"
+          },
+          "groups": [
+            ["temperature3", "temperature4"]
+          ]
+        },
+        "bar": {
+          "width": {
+            "max": 30
+          }
+        },
+        "legend": {
+          "show": "true"
+        }
+      },
+      "sources": {
+        "thermostat1": {
+          "new_temperature_therm1": [
+            "temperature1",
+            "temperature2",
+            "temperature3",
+            "temperature4",
+            "time"
+          ]
+        }
+      }
+    },
+    {
+      "py/object": "graph.Graph",
+      "name": "chart3",
+      "dataArray": [],
+      "json_format": {
+        "bindto": "#chart3",
+        "data": {
+          "x": "time",
+          "columns": [
+            [ "temperature1"],
+            ["time"]
+          ],
+          "types": {
+            "temperature": "bar"
+          }
+        },
+        "axis": {
+          "y": {
+            "label": {
+              "text": "Y Label",
+              "position": "outer-middle"
+            }
+          }
+        }
+      },
+      "sources": {
+        "thermostat1": {
+          "new_temperature_therm1": [
+            "temperature1",
+            "time"
+          ]
+        }
+      }
+    }
+  ]
+}

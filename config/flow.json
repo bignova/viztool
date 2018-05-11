@@ -1,0 +1,36 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "flow",
+  "devices":[ 
+    {
+      "py/object": "device.Device",
+      "name": "flowAddE",
+      "events":[
+       {
+          "py/object": "event.Event",
+          "name": "addE",
+          "graphs": {},
+          "token" : ""
+        }
+      ]
+    }
+  ],
+  "graphs":[ 
+    {
+      "py/object": "graph.Graph",
+      "dataArray" : [],
+      "name": "flowAddE",
+      "json_format": {
+        "bindto": "#flowAddE",
+        "data": {
+          "columns": [
+              ["node", "HOU 4-1 MIN", "OKC 2-4 UTA", "POR 0-4 NOP", "GSW 4-1 SAS", "TOR 4-2 WAS",  "CLE 4-3 IND", "PHI 4-1 MIA", "BOS 4-3 IND"],
+              ["edge"]
+          ],
+          "type":"flow"
+        }
+      },
+      "sources" : {"flowAddE": {"addE": ["operation","target"]}}
+    }
+  ]
+}

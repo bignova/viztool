@@ -1,0 +1,87 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "status_page",
+  "devices": [
+    {
+      "py/object": "device.Device",
+      "name": "status_updater",
+      "events": [
+        {
+          "py/object": "event.Event",
+          "name": "Viztool_update",
+          "graphs": {},
+          "token": "CMSC435"
+        },
+        {
+          "py/object": "event.Event",
+          "name": "Collaboration_update",
+          "graphs": {},
+          "token": "CMSC435"
+        },
+        {
+          "py/object": "event.Event",
+          "name": "Calendar_update",
+          "graphs": {},
+          "token": "CMSC435"
+        },
+        {
+          "py/object": "event.Event",
+          "name": "Scrapbook_update",
+          "graphs": {},
+          "token": "CMSC435"
+        },
+        {
+          "py/object": "event.Event",
+          "name": "Mimtool_update",
+          "graphs": {},
+          "token": "CMSC435"
+        },
+           {
+          "py/object": "event.Event",
+          "name": "Decisions_update",
+          "graphs": {},
+          "token": "CMSC435"
+        }
+      ]
+    }
+  ],
+  "graphs": [
+    {
+      "py/object": "graph.Graph",
+      "dataArray" : [],
+      "name": "chart1",
+      "json_format": {
+      "bindto": "#chart1",
+      "data": {
+        "x": "Team Name",
+        "columns": [
+            ["Team Name", "Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8", "Week 9", "Week 10", "Week 11", "Week 12"],
+            ["Viztool", "Collaboration", "Calendar", "Scrapbook", "Mimtool", "Decisions"]
+        ],
+        "type": "table"
+      },
+      "match" : {
+        "table_token":
+          [
+            {"viz_token" : [["Viztool"],["All"]]},
+            {"colab_token" : [["Collaboration"],["All"]]},
+            {"cal_token" : [["Calendar"],["All"]]},
+            {"scrap_token" : [["Scrapbook"],["All"]]},
+            {"mim_token" : [["Mimtool"],["All"]]},
+            {"decision_token" : [["Decisions"],["All"]]}
+         ]
+      }
+    },
+    "sources" : {
+      "status_updater": {
+        "Viztool_update": ["row", "column", "value", "color", "table_token"],
+        "Collaboration_update": ["row", "column", "value", "color", "table_token"],
+        "Calendar_update": ["row", "column", "value", "color", "table_token"],
+        "Scrapbook_update": ["row", "column", "value", "color", "table_token"],
+        "Mimtool_update": ["row", "column", "value", "color", "table_token"],
+        "Decisions_update": ["row", "column", "value", "color", "table_token"]
+        }
+      }
+    }
+  ]
+}

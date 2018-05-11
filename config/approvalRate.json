@@ -1,0 +1,42 @@
+{
+  "py/object": "config.Config",
+  "urlExtension": "approvalRate",
+  "devices":[ 
+    {
+      "py/object": "device.Device",
+      "name": "approve1",
+      "events":[
+       {
+          "py/object": "event.Event",
+          "name": "approvalRate1",
+          "graphs": {},
+          "token" : ""
+        }
+      ]
+    }
+  ],
+  "graphs":[ 
+    {
+      "py/object": "graph.Graph",
+      "dataArray" : [],
+      "name": "graph1",
+      "json_format": {
+        "bindto": "#graph1",
+        "data": {
+          "columns": [
+              ["approve"],
+              ["disapprove"]
+          ],
+          "types": {
+              "approve": "area-spline",
+              "disapprove": "area-spline"
+          },
+          "groups": [
+            ["approve", "disapprove"]
+          ]
+        }
+      },
+      "sources" : {"approve1": {"approvalRate1": ["approve","disapprove"]}}
+    }
+  ]
+}
