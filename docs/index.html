@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Viztool</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-laptop"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1><b>Viztool</b></h1>
+								<p>An End to End, Language Agnostic, Visualization Framework.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#About">About</a></li>
+								<li><a href="#Demos">Demos</a></li>
+								<li><a href="#Download">Download</a></li>
+								<li><a href="#team">Team</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="About">
+								<center><h2 class="major">About</h2></center>
+								<span class="image main"><img src="images/graph.jpg" alt="" /></span>
+								<p>At the moment, developers face a fragmented reality when it comes to identifying a platform with an effective API for listening to streams of data and generating meaningful graphics on the basis of these data.  What developers need is a consolidated solution; ideally, a powerful, versatile system that allows them to hook up a wide range of devices or data sources to stream data from and visualize these data in an effective manner instantaneously. We also wish for this system to be powerful, simple to use, and easily extendable so that users can expand it to fit a wide variety of usage scenarios.</p>
+								<p>With this in mind, we present Viztool,  a flexible set of tools and demos that can be used, followed, and modified by a user in order to properly visualize their data in a way they deem most appropriate. By doing so, the user will have the ability to stream data in any way he/she seems fit, as well as visualize the data as graphs and charts on a web page.</p>
+							</article>
+
+						<!-- Work -->
+							<article id="Demos">
+								<center><h2 class="major">Demos</h2></center>
+								<p>Viztool is a customizable tool package that allows for users to visualize data in real time. A user has the option of changing existing demos or providing their own code to stream data. Viztool has several components:</p>
+								<ul>
+									<li>The Viztool Hub, which is the center of processing for our system</li>
+									<li>The config file, which is used to subscribe devices and intialize graphs</li>
+									<li>Devices to send data to the hub</li>
+									<li>The extendable front end library which visualizes data in real time</li>
+								</ul>
+								<p><a href="README.txt">Click Here</a> to learn more in depth about Viztool and how it works!</p>
+								
+								<p>The following are several examples of possible visualizations along with their live demos to showcase various use cases of our system</p>
+								<div>
+									<h3>Temperature</h3>
+									<span class="image main"><img src="images/temp.png" alt="" /></span>
+									<p>In this demo a 'thermostat' sends ranodmized temperature data to be visualized as line and bar graphs. <a href="vacancy.cs.umd.edu:8000/temperature" target = "_blank">Link</a></p>
+								<div>
+								<div>
+									<h3>Variable Scoreboard</h3>
+									<span class="image main"><img src="images/score.png" alt="" /></span>
+									<p>This demo runs three programs, each with variables x, y, and z. There variables are periodically sent from each program to the hub, which visualizes them as a table to help with debugging. <a href="vacancy.cs.umd.edu:8000/scoreboard" target = "_blank">Link</a></p>
+									
+								<div>
+								<div>
+									<h3>Approval Rate</h3>
+									<span class="image main"><img src="images/rate.png" alt="" /></span>
+									<p>This demo randomly generates data to simulate an approval rating, which is then visualized as an area spline graph. <a href="vacancy.cs.umd.edu:8000/approvalRate" target = "_blank">Link</a></p>
+
+									
+								<div>
+							</article>
+
+						<!-- About -->
+							<article id="Download">
+								<center><h2 class="major">Download</h2></center>
+								<center><a href="Viztool-Code.zip" class="button special icon fa-download" target="_blank">Download</a></center>
+								<br>
+								<br>
+								<p><u>Installation Instructions</u></p>
+								<p>
+									<ul>
+										<li><b>Recommended: Pipenv setup</b>
+										<ol>
+											<li>
+												Install pipenv according to directions found <a href="https://docs.pipenv.org/" target="_blank">here</a>
+											</li>
+											<li>
+												Download and extract the contents of the Viztool zip folder
+											</li>
+											<li>
+												Navigate to folder with Viztool contents
+											</li>
+											<li>
+												Run “pipenv install --two” to set up a Python 2.7 environment
+											</li>
+											<li>
+												Pipenv will automatically install all requirements in the ‘requirements.txt’ file
+											</li>
+											<li>
+												Note: All python scripts run inside the pipenv should be run as ‘pipenv run python 
+												filename.py’
+											</li>
+
+										</ol>
+										</li>
+										
+										<li>
+											Alternate setup
+											<ol>
+												<li>
+													Download and extract the contents of the Viztool zip folder
+												</li>
+												<li>
+													Ensure Python version 2.7
+												</li>
+												<li>
+													Install dependencies with the command “pip install -r requirements.txt”
+												</li>
+											</ol>
+										</li>
+									</ul>
+								</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="team">
+
+								<h2 class="major">Team</h2>
+								<p>This project was created as a part of CMSC435 at the University of Maryland, College Park</p>
+								Team Members:
+								<ul>
+									<li>Kurt Barsotti</li>
+									<li>Anthony Breitzman</li>
+									<li>Samirbhai Mistry</li>
+									<li>Aditya Mithas</li>
+									<li>Timothy Morrill</li>
+									<li>Alex Panagopoulos</li>
+									<li>Xun Wang</li>
+									<li>Yimeng Wu</li>
+								</ul>
+	
+							</article>
+
+						
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Viztool. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
