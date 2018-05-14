@@ -1,5 +1,9 @@
 # viztool
 
+### GitHub Pages ###
+
+https://bignova.github.io/viztool/
+
 ### Overview
 
 Viztool is a framework that aims to help a user easily visualize any type of data from any source in one location. A user runs Viztool as a Flask server then sends data to the hub component of Viztool. The hub processes incoming data updates and then with WebSockets (socket.io) sends data to the frontend to render the visualizations of the data in the form of various graphic objects or tables to an endpoint ```<host name>:<port>```. By allowing the user implement their visualizations in JavaScript libraries, Viztool is highly customizable and extensible. Currently, the demos provided use c3.js and d3.js to create these visualizations. The entry point to the Viztool system is a static JSON configuration file which outlines the devices that will send data, the events and data these devices will send, and in which graphs (as well as their format) the user wants the data to be displayed.
